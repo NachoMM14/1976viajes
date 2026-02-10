@@ -1,0 +1,355 @@
+/* ===== 1976 EXPERIENCIAS “SISTEMA BASE” ===== */
+
+/* 1) Fuentes (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&family=Montserrat:wght@300;400;500;600&family=Raleway:wght@200;300;400;500;700&display=swap');
+@font-face {
+    font-family: "Amsterdam Three";
+    src: url("https://cdn.jsdelivr.net/gh/NachoMM14/1976viajes@main/fonts/amsterdam-three.woff2") format("woff2");
+}
+
+/* 2) Variables de marca */
+:root{
+  --1976-bg: #fffdf8;               /* beige suave */
+  --1976-text: #222433;             /* gris muy oscuro */
+  --1976-muted: #6b7280;            /* gris medio */
+  --1976-primary: #1f3c5b;          /* azul elegante */
+  --1976-accent: #b38b59;           /* dorado suave */
+  --1976-border: #e6e2da;           /* borde sutil */
+  --1976-radius: 14px;
+  --1976-container: 1180px;
+
+  --1976-h1: clamp(36px, 4.2vw, 56px);
+  --1976-h2: clamp(28px, 3.2vw, 40px);
+  --1976-h3: clamp(22px, 2.4vw, 28px);
+  --1976-leading: 1.6;
+}
+
+/* 3) Reset suave + tipografía global */
+body{
+  background: var(--1976-bg);
+  color: var(--1976-text);
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: var(--1976-leading);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img{max-width:100%; height:auto; display:block;}
+*{box-sizing:border-box;}
+
+.theme-1976 h1,
+.theme-1976 .h1{font-family:'Playfair Display', serif; font-weight:600; font-size:var(--1976-h1); line-height:1.15; letter-spacing:0.2px; margin:0.2em 0;}
+.theme-1976 h2,
+.theme-1976 .h2{font-family:'Playfair Display', serif; font-weight:600; font-size:var(--1976-h2); line-height:1.2; margin:0.8em 0 0.4em;}
+.theme-1976 h3,
+.theme-1976 .h3{font-weight:600; font-size:var(--1976-h3); margin:0.8em 0 0.3em;}
+.theme-1976 p{margin:0.6em 0; color:var(--1976-muted);}
+
+/* 4) Contenedor y secciones con aire */
+.theme-1976 .container{max-width:var(--1976-container); margin:0 auto; padding:0 20px;}
+.theme-1976 section{padding:64px 0;}
+@media (max-width:768px){ .theme-1976 section{padding:40px 0;} }
+
+/* 5) Enlaces y CTAs */
+.theme-1976 a{color:var(--1976-primary); text-decoration:none;}
+.theme-1976 a:hover{opacity:.85;}
+.theme-1976 .btn{
+  display:inline-block; padding:12px 20px; border-radius:999px;
+  background:var(--1976-primary); color:#fff; font-weight:600;
+  transition:.2s ease; text-decoration:none;
+}
+.theme-1976 .btn-outline{
+  background:transparent; border:1px solid var(--1976-primary); color:var(--1976-primary);
+}
+.theme-1976 .btn:hover{transform:translateY(-1px);}
+
+/* 6) Cabecera / navegación (estilo claro, elegante) */
+.header-1976{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.9); backdrop-filter:saturate(180%) blur(8px); border-bottom:1px solid var(--1976-border);}
+.header-1976 .menu a{padding:14px 12px; text-transform:uppercase; letter-spacing:.06em; font-size:13px;}
+.page .buscadorCarruselMotor {margin-top: 0 !important;}
+@media (min-width: 1200px){
+    .page .buscadorCarruselMotor {margin-top: 80px !important;}
+}
+
+/* 7) HERO / SLIDER (texto legible sobre foto) */
+.hero-1976{position:relative;}
+.hero-1976::after{content:""; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.15));}
+.hero-1976 .hero-inner{position:relative; z-index:2; padding:100px 0 80px;}
+.hero-1976 h1,
+.hero-1976 .slider h1{
+  color:#fff !important;
+  text-shadow:0 2px 16px rgba(0,0,0,.35);
+  margin:.15em 0 !important;
+  font-family:'Playfair Display', serif !important;
+}
+
+/* 8) Cards / “Ventajas” */
+.benefits-1976 .card{
+  background:#fff; border:1px solid var(--1976-border);
+  border-radius:var(--1976-radius); padding:20px; height:100%;
+  box-shadow:0 10px 24px -18px rgba(0,0,0,.2);
+}
+.benefits-1976 .card h3{margin-bottom:6px;}
+.benefits-1976 .icon{color:var(--1976-primary);}
+
+/* 9) Bloques editoriales (Inspiración, “L’Atelier”) */
+.block-title-1976{display:flex; align-items:center; gap:16px; margin-bottom:20px;}
+.block-title-1976::before{
+  content:""; width:44px; height:2px; background:var(--1976-accent); display:inline-block;
+}
+.badge-1976{display:inline-block; padding:6px 12px; border:1px solid var(--1976-border); border-radius:999px; font-size:12px; color:var(--1976-muted);}
+
+/* 10) Formularios */
+.form-1976 input,
+.form-1976 select,
+.form-1976 textarea{
+  width:100%; border:1px solid var(--1976-border); border-radius:10px;
+  padding:12px 14px; background:#fff; color:var(--1976-text);
+}
+.form-1976 label{font-weight:600; font-size:14px; margin:10px 0 6px; display:block;}
+.form-1976 .help{color:var(--1976-muted); font-size:12px;}
+
+/* 11) Footer */
+.footer-1976{background:#fff; border-top:1px solid var(--1976-border); color:var(--1976-muted);}
+.footer-1976 a{color:var(--1976-text);}
+
+/* 12) Overrides prácticos para módulos del CMS */
+.slider h1{font-size:var(--1976-h1) !important; line-height:1.1 !important;}
+.slider h1 + h1{margin-top:0 !important;}
+/* Evita capitulares raras que separan la 1ª letra */
+.slider .capitular, .capitular{float:none !important; font-size:inherit !important; padding:0 !important;}
+
+/* Alineación de las cuatro “ventajas” */
+.ventajas .col{display:flex; height:100%;}
+.ventajas .col .card{display:flex; flex-direction:column;}
+
+/* 13) Responsive fino */
+@media (max-width:992px){
+  .header-1976 .menu a{padding:12px 10px;}
+  .hero-1976 .hero-inner{padding:70px 0 60px;}
+}
+@media (max-width:600px){
+  :root{ --1976-container: 92vw; }
+  .theme-1976 h1{letter-spacing:0;}
+  .theme-1976 .btn{width:auto;}
+}
+
+/* Destinos */
+.section:has(.destino) {
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+.destino {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6;
+
+    @media (max-width: 767px) {
+        font-size: 1rem;
+        gap: 4rem;
+    }
+
+    .max-width {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .small {
+        font-size: 0.875rem;
+
+        @media (max-width: 767px) {
+            font-size: 0.75rem;
+        }
+    }
+
+    .normal {
+        font-size: 1rem;
+
+        @media (max-width: 767px) {
+            font-size: 0.875rem;
+        }
+    }
+
+    .big {
+        font-size: 1.25rem;
+
+        @media (max-width: 767px) {
+            font-size: 1rem;
+        }
+    }
+
+    .title,
+    .subtitle {
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        line-height: 1.6;
+        font-weight: 500;
+        text-wrap: pretty;
+    }
+
+    .title {
+        font-size: 1.5rem;
+
+        @media (max-width: 767px) {
+            font-size: 1.125rem;
+        }
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+
+        @media (max-width: 767px) {
+            font-size: 1rem;
+        }
+    }
+
+    .banner {
+        background-color: #f9f5f2;
+        padding-block: 4rem;
+        color: #2c3e50;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .head {
+            font-family: "Amsterdam Three", sans-serif;
+            font-size: 4rem;
+
+            @media (max-width: 767px) {
+                font-size: 2.5rem;
+            }
+
+            + .title {
+                @media (min-width: 768px) {
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        .title {
+            letter-spacing: 0.25em;
+        }
+    }
+
+    .text-image,
+    .image-text {
+        .wrapper {
+            display: grid;
+            gap: 1rem;
+            align-items: center;
+
+            @media (min-width: 768px) {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 4rem;
+            }
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .text-image {
+        .text {
+            @media (min-width: 768px) {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    .image-text {
+        .image {
+            @media (min-width: 1281px) {
+                grid-column: span 2;
+            }
+        }
+
+        .text {
+            @media (min-width: 768px) and (max-width: 1280px) {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .columns {
+        .wrapper {
+            display: grid;
+            gap: 2rem;
+
+            &.columns-2 {
+                @media (min-width: 768px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            &.columns-3 {
+                @media (min-width: 768px) {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            &.columns-4 {
+                @media (min-width: 768px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                @media (min-width: 1281px) {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
+    .faqs {
+        .faq-item {
+            padding-block: 1rem;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .subtitle {
+            cursor: pointer;
+
+            &::marker {
+                content: "";
+            }
+        }
+
+        .answer {
+            margin-top: 1rem;
+        }
+    }
+}

@@ -68,6 +68,7 @@ img{max-width:100%; height:auto; display:block;}
 .page .buscadorCarruselMotor {margin-top: 0 !important;}
 @media (min-width: 1200px){
     .page .buscadorCarruselMotor {margin-top: 80px !important;}
+    .page-header .rd-navbar-submenu-toggle {display: none !important;}
 }
 
 /* 7) HERO / SLIDER (texto legible sobre foto) */
